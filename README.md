@@ -37,6 +37,21 @@ bash configs/train_sram.sh
 bash configs/train_stram.sh
 ```
 ## Tracking
+* **Evaluation on MOT17 half val**
+The following code is used to apply tram, sram, and stram to the original Baseline method.
+```
+python tools/track_baseline.py
+python tools/track_baseline.py --tram --pretrained pretrained/mot17_half_tram.pth
+python tools/track_baseline.py --sram --pretrained pretrained/mot17_half_sram.pth
+python tools/track_baseline.py --stram --pretrained pretrained/mot17_half_stram.pth
+```
+| Model     | IDF1 | MOTA | IDS |
+|------------|-------|------|------|------|
+|Baseline |  75.56 | 79.85 | 495 |
+|Baseline+TRAM |  76.34 | 80.51 | 478 |
+|Baseline+SRAM |  75.94 | 80.50 | 480 |
+|Baseline+STRAM |  77.14 | 81.14 | 479 |
+
 
 ## Applying RAM to other trackers
 
