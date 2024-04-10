@@ -38,6 +38,7 @@ bash configs/train_stram.sh
 ```
 ## Tracking
 * **Evaluation on MOT17 half val**
+
 The following code is used to apply tram, sram, and stram to the original Baseline method.
 ```
 python tools/track_baseline.py
