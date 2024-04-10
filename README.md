@@ -54,4 +54,5 @@ If you find this repository useful, please consider citing our paper:
 ```
 ## Acknowledgement
 A large part of the code is borrowed from [ByteTrack](https://github.com/ifzhang/ByteTrack), [FastReID](https://github.com/JDAI-CV/fast-reid), [MOTR](https://github.com/megvii-research/MOTR), [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) and [YOLOv7](https://github.com/wongkinyiu/yolov7). Many thanks for their wonderful works.
+
 This research was funded by the National Natural Science Foundation of China grant number 62002323.
