@@ -46,7 +46,7 @@ python tools/track_baseline.py --sram --pretrained pretrained/mot17_half_sram.pt
 python tools/track_baseline.py --stram --pretrained pretrained/mot17_half_stram.pth
 ```
 | Model     | IDF1 | MOTA | IDS |
-|------------|-------|------|------|------|
+|------------|------|------|------|
 |Baseline |  75.56 | 79.85 | 495 |
 |Baseline+TRAM |  76.34 | 80.51 | 478 |
 |Baseline+SRAM |  75.94 | 80.50 | 480 |
