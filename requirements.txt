@@ -1,2 +1,5 @@
 info-nce-pytorch
 cython_bbox
+pyyaml
+yacs
+termcolor

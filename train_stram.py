@@ -223,7 +223,7 @@ def main(args):
                 trajectories = trajectories[:, 1:].unsqueeze(0).to(device)
                 humans = humans[:, 1:].unsqueeze(0).to(device)
                 marks = torch.tensor(marks)[:, 1:].unsqueeze(0).to(device)
-                trajectories_aligned_feature, humans_aligned_feature, marks_aligned_feature = model(trajectories, humans, marks)
+                trajectories_aligned_feature, marks_aligned_feature, humans_aligned_feature = model(trajectories, marks, humans)
                 trajectories_aligned_feature = trajectories_aligned_feature.squeeze(0)
                 humans_aligned_feature = humans_aligned_feature.squeeze(0)
                 marks_aligned_feature = marks_aligned_feature.squeeze(0)

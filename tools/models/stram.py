@@ -33,10 +33,10 @@ class STRAM(nn.Module):
             if p.dim() > 1:
                 nn.init.xavier_uniform_(p)
 
-    def forward(self, trajectories, humans, marks):
+    def forward(self, trajectories, marks, humans):
         trajectories = self.linear_1(trajectories)
-        humans = self.linear_2(humans)
-        marks = self.linear_3(marks)
+        marks = self.linear_2(marks)
+        humans = self.linear_3(humans)
         q_oe = k_oe = v_oe = torch.cat([trajectories, humans, marks], 1)
 
         tgt_oe = v_oe
@@ -50,8 +50,8 @@ class STRAM(nn.Module):
         tgt_oe = self.norm2_oe(tgt_oe)
 
         trajectories_len = trajectories.shape[1]
-        humans_len = humans.shape[1]
-        return tgt_oe[:, :trajectories_len, :], tgt_oe[:, trajectories_len:trajectories_len+humans_len, :], tgt_oe[:, trajectories_len+humans_len:, :]
+        marks_len = marks.shape[1]
+        return tgt_oe[:, :trajectories_len, :], tgt_oe[:, trajectories_len:trajectories_len+marks_len, :], tgt_oe[:, trajectories_len+marks_len:, :]
 
 def build(args):
     return STRAM(args, args.d_model, args.hidden_dim)

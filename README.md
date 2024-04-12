@@ -8,6 +8,8 @@
 
 ## Requirements
 
+We used [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) and [FastReID](https://github.com/JDAI-CV/fast-reid), please refer to their installation guides for additional setup options.
+
 ## Data Preparation
 
 Download [MOT17](https://motchallenge.net/data/MOT17/) and [MOT20](https://motchallenge.net/data/MOT20/) from the [official website](https://motchallenge.net/). And put them in the following structure:
@@ -53,7 +55,15 @@ python tools/track_baseline.py --stram --pretrained pretrained/mot17_half_stram.
 |Baseline+SRAM |  75.94 | 80.50 | 480 |
 |Baseline+STRAM |  77.14 | 81.14 | 479 |
 
-
+The following code is used to apply stram to the original IOU metric, Reid metric, or IOU+Reid metric. You can use the "metric" parameter to specify which metric to use, and the "stram" parameter to indicate whether stram should be used.
+```
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou --stram --pretrained pretrained/mot17_half_stram.pth
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric reid
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric reid --stram --pretrained pretrained/mot17_half_stram.pth
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou_reid
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou_reid --stram --pretrained pretrained/mot17_half_stram.pth
+```
 ## Applying RAM to other trackers
 
 ## Demo

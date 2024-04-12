@@ -1,0 +1,10 @@
+_BASE_: ../Base-bagtricks.yml
+
+DATASETS:
+  NAMES: ("MOT17",)
+  TESTS: ("MOT17",)
+
+OUTPUT_DIR: logs/mot17/bagtricks_R50
+
+MODEL:
+  WEIGHTS: /media/disk2/lzl/BoT-SORT/fast_reid/model/market_bot_R50.pth
