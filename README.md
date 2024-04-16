@@ -83,7 +83,10 @@ By submitting the results from the YOLOX_outputs folder to the MOTChallenge webs
 
 See [tutorials](https://github.com/liuzhonglincc/RATracker/tree/main/tutorials).
 
-## Demo
+## Visualization results on MOT17 and MOT20
+
+<img src="figure/MOT17_02_FRCNN.gif" width="400"/>   <img src="figure/MOT17_09_FRCNN.gif" width="400"/>
+<img src="figure/MOT20_02.gif" width="400"/>   <img src="figure/MOT20_05.gif" width="400"/>
 
 ## Citation
 If you find this repository useful, please consider citing our paper:
