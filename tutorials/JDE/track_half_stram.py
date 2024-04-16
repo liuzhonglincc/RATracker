@@ -204,6 +204,8 @@ if __name__ == '__main__':
     parser.add_argument('--save-videos', action='store_true', help='save tracking results (video)')
 
     parser.add_argument('--merger_dropout', type=float, default=0.1)
+    parser.add_argument('--hidden_dim', type=int, default=256)
+    parser.add_argument('--d_model', type=int, default=128)
     parser.add_argument('--mark_ration', type=float, default=0.2)
     parser.add_argument('--weight_s', type=float, default=0.28)
     parser.add_argument('--weight_t', type=float, default=0.28)
