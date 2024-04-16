@@ -70,6 +70,7 @@ python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" -
 ```
 
 * **Test on MOT17 and MOT20**
+
 Run the following code to verify on the MOT17 and MOT20 test sets:
 ```
 python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "test" --fp16 --fuse --metric iou --stram --pretrained pretrained/mot17_test_stram.pth
