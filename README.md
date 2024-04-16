@@ -40,9 +40,10 @@ bash configs/train_stram.sh
 ```
 You can download the pretrained model [here](https://pan.baidu.com/s/1_67t832ofmumPGMwkpsXGw?pwd=7712).
 
+## Tracking
+
 We have used ByteTrack and FastReID, you need to download [bytetrack_ablation](https://github.com/ifzhang/ByteTrack), [bytetrack_x_mot17](https://github.com/ifzhang/ByteTrack), [bytetrack_x_mot20](https://github.com/ifzhang/ByteTrack), and [mot17_sbs_S50](https://drive.google.com/file/d/1QZFWpoa80rqo7O-HXmlss8J8CnS7IUsN/view).
 
-## Tracking
 * **Evaluation on MOT17 half val**
 
 The following code is used to apply tram, sram, and stram to the original Baseline method.
