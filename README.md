@@ -38,6 +38,10 @@ bash configs/train_tram.sh
 bash configs/train_sram.sh
 bash configs/train_stram.sh
 ```
+You can download the pretrained model [here](https://pan.baidu.com/s/1_67t832ofmumPGMwkpsXGw?pwd=7712).
+
+We have used ByteTrack and FastReID, you need to download [bytetrack_ablation](https://github.com/ifzhang/ByteTrack), [bytetrack_x_mot17](https://github.com/ifzhang/ByteTrack), [bytetrack_x_mot20](https://github.com/ifzhang/ByteTrack), and [mot17_sbs_S50](https://drive.google.com/file/d/1QZFWpoa80rqo7O-HXmlss8J8CnS7IUsN/view).
+
 ## Tracking
 * **Evaluation on MOT17 half val**
 
@@ -64,6 +68,16 @@ python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" -
 python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou_reid
 python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "val" --fp16 --fuse --metric iou_reid --stram --pretrained pretrained/mot17_half_stram.pth
 ```
+
+* **Test on MOT17 and MOT20**
+Run the following code to verify on the MOT17 and MOT20 test sets:
+```
+python3 tools/track.py datasets/MOT17 --default-parameters --benchmark "MOT17" --eval "test" --fp16 --fuse --metric iou --stram --pretrained pretrained/mot17_test_stram.pth
+python3 tools/track.py datasets/MOT20 --default-parameters --benchmark "MOT20" --eval "test" --fp16 --fuse --metric iou --stram --pretrained pretrained/mot20_test_stram.pth
+```
+
+By submitting the results from the YOLOX_outputs folder to the MOTChallenge website, you can achieve the same performance as the paper. We adopted the ByteTrack approach by fine-tuning tracking parameters for each scene to achieve higher performance.
+
 ## Applying RAM to other trackers
 
 See [tutorials](https://github.com/liuzhonglincc/RATracker/tree/main/tutorials).

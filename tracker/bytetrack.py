@@ -370,6 +370,9 @@ class ByteTrack(object):
                     temporal_dist = self.args.weight_t*temporal_dist + (1-self.args.weight_t)*dists
                 else:
                     temporal_dist = dists
+            else:
+                temporal_dist = dists
+                
             if self.frame_id == 1:
                 dists_fused = dists
             elif self.frame_id == 2:
