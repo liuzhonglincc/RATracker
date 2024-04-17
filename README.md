@@ -8,7 +8,37 @@
 
 ## Requirements
 
-We used [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) and [FastReID](https://github.com/JDAI-CV/fast-reid), please refer to their installation guides for additional setup options.
+**Step 1.** Install python and create Conda environment.
+```
+conda create -n Ratracker python=3.8
+conda activate Ratracker
+```
+
+**Step 2.** Install torch and matched torchvision from [pytorch.org](https://pytorch.org/get-started/locally/).<br>
+The code was tested using torch==1.13.0 and torchvision==0.14.0.
+
+**Step 3.** Install RATracker.
+```
+git clone https://github.com/liuzhonglincc/RATracker.git
+cd RATracker
+pip3 install -r requirements.txt
+python3 setup.py develop
+```
+
+**Step 4.** Install [pycocotools](https://github.com/cocodataset/cocoapi).
+```
+pip3 install cython; 
+pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+```
+
+**Step 5.** Others
+```
+pip3 install cython_bbox
+pip3 install faiss-cpu
+pip3 install faiss-gpu
+```
+
+We additionally used [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) and [FastReID](https://github.com/JDAI-CV/fast-reid), please refer to their installation guides for additional setup options.
 
 ## Data Preparation
 
