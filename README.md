@@ -86,7 +86,6 @@ See [tutorials](https://github.com/liuzhonglincc/RATracker/tree/main/tutorials).
 
 ## Visualization results on MOT17 and MOT20
 
-<img src="figure/MOT17_02_FRCNN.gif" width="400"/>   
 <img src="figure/MOT17_09_FRCNN.gif" width="400"/>
 <img src="figure/MOT20_02.gif" width="400"/>   
 
