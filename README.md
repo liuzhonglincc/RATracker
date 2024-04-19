@@ -45,7 +45,7 @@ We additionally used [YOLOX](https://github.com/Megvii-BaseDetection/YOLOX) and 
 Download [MOT17](https://motchallenge.net/data/MOT17/) and [MOT20](https://motchallenge.net/data/MOT20/) from the [official website](https://motchallenge.net/). And put them in the following structure:
 
 ```
-<dataets_dir>
+<datasets_dir>
       │
       ├── MOT17
       │      ├── train
